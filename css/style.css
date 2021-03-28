@@ -69,6 +69,12 @@ body {
   justify-content: flex-end;
 }
 /* навигация по сайту */
+.link-item svg {
+  /* margin: 0; */
+  margin-right: 10px;
+  cursor: pointer;
+}
+
 .link {
   text-decoration: none;
   font-weight: 500;
@@ -91,7 +97,7 @@ body {
 .link-item:not(:last-child) {
   margin-right: 50px;
 }
-/* еавигация по контактам */
+/* навигация по контактам */
 .link-contacts {
   text-decoration: none;
   color: var(--link-text-kontacts);
@@ -110,6 +116,7 @@ body {
   text-transform: uppercase;
   padding-top: 200px;
   padding-bottom: 200px;
+  background-image: url(../images/Img-hero.png);
 }
 
 .hero-title {
@@ -159,6 +166,14 @@ body {
 }
 
 /* заголовки */
+.icon-quality {
+  background: #f5f4fa;
+  width: 270px;
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 .title {
   font-weight: bold;
   font-size: 14px;
@@ -237,7 +252,37 @@ body {
   display: flex;
   justify-content: center;
 }
+.social-icons .icon {
+  width: 20px;
+  height: 20px;
+  fill: #afb1b8;
+}
+.div-icons {
+  padding: 10 30px 30px 32px;
+  display: flex;
+  justify-content: center;
+}
+.social-icons-iteam + .social-icons-iteam {
+  margin-left: 10px;
+}
+.social-icons-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border-radius: 50%;
+}
 
+.social-icons-link:hover .icon,
+.social-icons-link:focus .icon {
+  fill: #ffffff;
+}
+.social-icons-link:hover,
+.social-icons-link:focus {
+  background-color: var(--accent-text-color);
+}
 /* portfolio */
 
 .title-portfolio {
