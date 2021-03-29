@@ -102,6 +102,7 @@ body {
   text-decoration: none;
   color: var(--link-text-kontacts);
 }
+
 .link-contacts:focus,
 .link-contacts:hover {
   color: var(--accent-text-color);
@@ -116,7 +117,7 @@ body {
   text-transform: uppercase;
   padding-top: 200px;
   padding-bottom: 200px;
-  background-image: url(../images/Img-hero.png);
+  background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)), url(../images/Img-hero.png);
 }
 
 .hero-title {
@@ -166,14 +167,6 @@ body {
 }
 
 /* заголовки */
-.icon-quality {
-  background: #f5f4fa;
-  width: 270px;
-  height: 120px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
 .title {
   font-weight: bold;
   font-size: 14px;
@@ -193,13 +186,37 @@ body {
   padding-top: 94px;
   padding-bottom: 94px;
 }
+.list-quality::before {
+  display: flex;
+  content: '';
+  height: 120px;
+  background-color: #f5f4fa;
+  background-size: auto;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.list-quality:nth-child(1):before {
+  background-image: url(../images/icons/antenna.svg);
+}
+.list-quality:nth-child(2):before {
+  background-image: url(../images/icons/clock.svg);
+}
+.list-quality:nth-child(3):before {
+  background-image: url(../images/icons/diagram.svg);
+}
+.list-quality:nth-child(4):before {
+  background-image: url(../images/icons/astronaut.svg);
+}
+
 .list-quality {
   max-width: 270px;
 }
+
 .list-quality:not(:last-child),
 .list-img:not(:last-child) {
   margin-right: 30px;
 }
+/* секция работы */
 .section-working {
   margin-top: 0;
   margin-bottom: 0;
@@ -212,6 +229,8 @@ body {
 .list-img {
   max-width: 370px;
   background-color: #ffffff;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
 }
 
 /* обзацы */
@@ -286,6 +305,36 @@ body {
 .social-icons-link:hover,
 .social-icons-link:focus {
   background-color: var(--accent-text-color);
+}
+/* секция клиенты */
+.section-clients {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section-clients .section-title {
+  margin-bottom: 50px;
+}
+.clients {
+  display: inline-flex;
+  flex-basis: calc(100% - 30px);
+  flex-wrap: wrap;
+}
+.section-clients .site-title {
+  display: flex;
+}
+.list-clients {
+  flex-basis: calc((100% - 5 * 30px) / 6);
+  border: 1px solid #afb1b8;
+  box-sizing: border-box;
+  border-radius: 4px;
+  height: 90px;
+  cursor: pointer;
+}
+.list-clients:not(:last-child) {
+  margin-right: 30px;
+}
+.icon {
+  fill: #afb1b8;
 }
 /* portfolio */
 
